@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div className='home-container'>
         <Navbar/>
-        <div className="home-banner-container">
+        <div className="home-banner-container" id="Home">
         
 
         
@@ -16,11 +16,12 @@ const Home = () => {
           Elevate Performance. Empower Learners.
           </h2>
           <p className="primary-text">
-          We build smart learning solutions from strategy to delivery <br/> Unlock potential and drive real impact.
+          We transforming learning through evidence-based designs and digital innovations.
           </p>
-          <button className="secondary-button">
+          <a href="https://docs.google.com/forms/d/1_e-vhBhLIERDgFU6BCgBarIncixx_irAakeqoXaW5Fs/edit" target="_blank" rel="noopener noreferrer"><button className="secondary-button">
          Get Started 
-          </button>
+          </button></a>
+
         </div>
         
 

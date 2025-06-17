@@ -1,5 +1,5 @@
 import React from "react";
-import Logo1 from "../Assets/Logo1.svg";
+import logowf from "../Assets/logowf.png";
 import { BsTwitter } from "react-icons/bs";
 import { SiLinkedin } from "react-icons/si";
 import { BsYoutube } from "react-icons/bs";
@@ -10,7 +10,7 @@ const Footer = () => {
     <div className="footer-wrapper">
       <div className="footer-section-one">
         <div className="footer-logo-container">
-          <img src={Logo1} alt="" />
+          <img src={logowf} alt="" />
         </div>
         <div className="footer-icons">
           <BsTwitter />
@@ -21,7 +21,7 @@ const Footer = () => {
       </div>
       <div className="footer-section-two">
         <div className="footer-section-columns">
-          <h3 style={{ color: "purple" }}>Our Services</h3>
+          <h3 style={{ color: "white" }}>Our Services</h3>
           <span>About us</span>
           <span>Contact Us</span>
           <span>Book Now</span>
@@ -29,15 +29,15 @@ const Footer = () => {
           
         </div>
         <div className="footer-section-columns">
-          <h3 style={{ color: "purple" }}>Contact</h3>
+          <h3 style={{ color: "white" }}>Contact</h3>
           <span>Instagram</span>
           <span>Linkedin</span>
           <span>Twitter</span>
           <span>Facebook</span>
         </div>
         <div className="footer-section-columns">
-          <h3 style={{ color: "purple" }}>Terms & Conditions</h3>
-          <h3 style={{ color: "purple" }}>Privacy Policy</h3>
+          <h3 style={{ color: "white" }}>Terms & Conditions</h3>
+          <h3 style={{ color: "white" }}>Privacy Policy</h3>
         </div>
       </div>
     </div>

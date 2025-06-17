@@ -2,23 +2,29 @@ import React from "react";
 import Consulting from "../Assets/Consulting.png";
 import Strategy from "../Assets/Strategy.png";
 import Instructional from "../Assets/Instructional.png";
+import Workshop from "../Assets/Workshop.png";
 
 const Work = () => {
   const workInfoData = [
     {
       image: Consulting,
       title: "Technology Consulting",
-      text: "We help organizations choose, set up, and optimize the right learning technologies.",
+      text: "LMS/ LXP consulting, Authoring tools consulting",
     },
     {
       image: Strategy,
       title: "Learning Strategy",
-      text: "We analyze learning needs and performance gaps to create focused strategies",
+      text: "Needs analysis, Performance analysis, Learning measurement, program evaluation",
     },
     {
       image: Instructional,
       title: "Instructional Design",
-      text: "We craft engaging, learner-centered experiences.",
+      text: "E-learning development, Curriculum design, Scenario-based learning",
+    },
+    {
+      image: Workshop,
+      title: "Workshop",
+      text: "Train-the-trainer, DEI training, Leadership development, Learning analytics workshops",
     },
   ];
   return (

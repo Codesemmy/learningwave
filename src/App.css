@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Reem Kufi", sans-serif !important;
+  
 }
 img {
   max-width: 100%;
@@ -10,8 +11,8 @@ img {
 }
 .App {
   min-height: 100vh;
-  width: 85vw;
-  max-width: 1900px;
+  /*width: 85vw;*/
+  max-width: none;
   margin: 0rem auto;
 }
 body {
@@ -48,11 +49,33 @@ nav {
   font-size: 1.1rem;
   cursor: pointer;
   font-weight: 600;
-  transition: 0.2s;
+  transition: 0.4s;
+  color: white;
 }
 .navbar-cart-icon {
   font-size: 1.15rem;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .navbar-links-container {
+    display: none;
+  }
+
+  .navbar-menu-container {
+    display: block;
+  }
+
+  nav {
+    padding: 0 1rem;
+  }
+
+  .nav-logo-container img {
+    width: 160px;  /* Slightly smaller logo for medium screens */
+  }
+}
+
+
+
 .primary-button:hover {
   background-color: rgb(140, 60, 180);
 }
@@ -60,6 +83,12 @@ nav {
   font-size: 1.5rem;
   cursor: pointer;
 }
+
+.nav-logo-container img {
+  width: 10rem;   /* Adjust to your desired size */
+  height: auto;   /* Maintains aspect ratio */
+}
+
 .home-banner-container {
   position: relative;
   display: flex;
@@ -67,7 +96,7 @@ nav {
   align-items: center;       /* Vertically center */
   flex-direction: column;
   min-height: 100vh;
-  padding: 2rem 1rem;
+  /*padding: 2rem 1rem;*/
   text-align: center;
   box-sizing: border-box;
 }
@@ -78,20 +107,20 @@ nav {
   align-items: center;
   justify-content: center;
   max-width: 800px;
-  padding: 2rem;
+  /*padding: 2rem;*/
   width: 100%;
   box-sizing: border-box;
 }
 
 .primary-heading {
-  font-size: clamp(2rem, 5vw, 3.5rem); /* Responsive heading */
-  color: #4c4c4c;
+  font-size: clamp(3rem, 5vw, 6rem); /* Responsive heading */
+  color: black;
   margin-bottom: 1rem;
 }
 
 .primary-text {
   font-size: clamp(1rem, 2.5vw, 1.4rem); /* Responsive paragraph */
-  color: #6a6a6a;
+  color: black;
   margin-bottom: 2rem;
   line-height: 1.6;
   max-width: 600px;
@@ -125,6 +154,8 @@ nav {
   justify-content: space-between;
  
 }
+
+
 .about-background-image-container {
   position: absolute;
   left: -150px;
@@ -150,15 +181,56 @@ nav {
   display: flex;
   flex-direction: column;
 }
+
+
 .primary-subheading {
   font-weight: 700;
-  color: #fe9e0d;
+  color: rgb(86, 22, 86);
   font-size: 1.15rem;
 }
 .about-buttons-container {
   margin-top: 2rem;
   display: flex;
 }
+.vision-section-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh; 
+}
+
+.vision-section-text-container {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* Center content vertically */
+  align-items: center;      /* Center content horizontally */
+  padding: 1rem;
+  border: 2px solid purple;
+  border-radius: 12px;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.vision-section-text-container:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 20px rgba(128, 0, 128, 0.2);
+}
+
+/* Active/clicked state */
+.vision-section-text-container.active {
+  background-color: purple;
+  color: white;
+  border-color: purple;
+}
+
+
 .watch-video-button {
   margin-left: 2rem;
   background-color: transparent;
@@ -168,7 +240,7 @@ nav {
   font-size: 1.1rem;
   cursor: pointer;
   font-weight: 600;
-  color: #484848;
+  color: black;
   transition: 0.2s;
   display: flex;
   align-items: center;
@@ -207,9 +279,14 @@ nav {
   padding: 0.5rem 1rem;
 }
 .footer-wrapper {
-  margin: 6rem 0rem;
   display: flex;
-  margin-top: 10rem;
+  background-color: purple; 
+  color: white;             
+  width: 100vw;           
+  overflow-x: hidden;
+  padding: 2rem;
+  box-sizing: border-box; /* includes padding in total width */
+
 }
 .footer-logo-container {
   max-width: 110px;
@@ -220,7 +297,7 @@ nav {
 .footer-icons svg {
   font-size: 1.5rem;
   margin-right: 1.25rem;
-  color: #585858;
+  color: white;
 }
 /* .footer-section-one {
   border: 2px solid blue;
@@ -238,7 +315,7 @@ nav {
 .footer-section-columns span {
   margin: 0.25rem 0rem;
   font-weight: 600;
-  color: #4c4c4c;
+  color:white;
   cursor: pointer;
 }
 .testimonial-section-bottom {
@@ -252,13 +329,14 @@ nav {
   border-radius: 2rem;
   flex-direction: column;
   text-align: center;
+  border: 2px solid rgb(85,22,85);
 }
 .testimonial-section-bottom {
   margin: 2rem auto;
 }
 .testimonial-section-bottom p {
   font-weight: 700;
-  color: #515151;
+  color: black;
   max-width: 500px;
   font-size: 1.1rem;
   margin: 2rem 0rem;
@@ -286,6 +364,7 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  
 }
 .work-section-info {
   width: 290px;
@@ -298,8 +377,9 @@ nav {
   align-items: center;
   text-align: center;
   border-radius: 1rem;
-  color: #505050;
+  color: black;
   margin: 1rem 2rem;
+  border: 2px solid rgb(85, 22, 85);
 }
 .work-section-info h2 {
   margin: 1rem 0rem;
