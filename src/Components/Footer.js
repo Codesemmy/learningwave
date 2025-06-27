@@ -22,10 +22,13 @@ const Footer = () => {
       <div className="footer-section-two">
         <div className="footer-section-columns">
           <h3 style={{ color: "white" }}>Our Services</h3>
-          <span>About us</span>
-          <span>Contact Us</span>
-          <span>Book Now</span>
-          <span>Testimonials</span>
+          <a href="#About"><span>About us</span></a>
+          <a href="#Contactus"><span>Contact Us</span></a>
+          <a href="#Book"><span>Book Now</span></a>
+          <a href="#Testimonial"><span>Testimonials</span></a>
+
+
+
           
         </div>
         <div className="footer-section-columns">

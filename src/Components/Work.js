@@ -9,22 +9,22 @@ const Work = () => {
     {
       image: Consulting,
       title: "Technology Consulting",
-      text: "LMS/ LXP consulting, Authoring tools consulting",
+      text: "LMS/ LXP consulting, Authoring tools consulting.",
     },
     {
       image: Strategy,
       title: "Learning Strategy",
-      text: "Needs analysis, Performance analysis, Learning measurement, program evaluation",
+      text: "Needs analysis, Performance analysis, Learning measurement, program evaluation.",
     },
     {
       image: Instructional,
       title: "Instructional Design",
-      text: "E-learning development, Curriculum design, Scenario-based learning",
+      text: "E-learning development, Curriculum design, Scenario-based learning.",
     },
     {
       image: Workshop,
       title: "Workshop",
-      text: "Train-the-trainer, DEI training, Leadership development, Learning analytics workshops",
+      text: "Train-the-trainer, DEI training, Leadership development, Learning analytics workshops.",
     },
   ];
   return (

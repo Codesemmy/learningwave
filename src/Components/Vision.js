@@ -20,7 +20,7 @@ const Vision = () => {
         Our Vision
         </h1>
         <p className="primary-text">
-        We envision a world where individuals perform at their highest potential, empowered by learning that is intuitive, inspiring, immersive, and impactful. Through accessible and transformative learning experiences, 
+        We envision a world where individuals perform at their highest potential, empowered by learning that is <span class="highlighted"> intuitive, inspiring, immersive, and impactful.</span> <br></br>Through accessible and transformative learning experiences, 
         we aim to unlock excellence in every learner and elevate performance across all levels.
         </p>
         

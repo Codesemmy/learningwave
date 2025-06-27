@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
-import logop from "../Assets/logop.png";
-/*import { BsCart2 } from "react-icons/bs";*/
+/*import logop from "../Assets/logop.png";*/
+/* import { BsCart2 } from "react-icons/bs"; */
 import { HiOutlineBars3 } from "react-icons/hi2";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -15,49 +15,71 @@ import HomeIcon from "@mui/icons-material/Home";
 import InfoIcon from "@mui/icons-material/Info";
 import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
 import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
-/*import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";*/
+import { Link } from "react-scroll";
+/* import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded"; */
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
-  const menuOptions = [
-    {
-      text: "Home",
-      icon: <HomeIcon />,
-    },
-    {
-      text: "About",
-      icon: <InfoIcon />,
-    },
-    {
-      text: "Testimonials",
-      icon: <CommentRoundedIcon />,
-    },
-    {
-      text: "Contact",
-      icon: <PhoneRoundedIcon />,
-    },
-    
 
-  ];
+  
+  const menuOptions = [
+  {
+    text: "Home",
+    icon: <HomeIcon />,
+    to: "Home",
+  },
+  {
+    text: "About",
+    icon: <InfoIcon />,
+    to: "About",
+  },
+  {
+    text: "Testimonial",
+    icon: <CommentRoundedIcon />,
+    to: "Testimonial",
+  },
+  {
+    text: "Contact",
+    icon: <PhoneRoundedIcon />,
+    to: "Contact",
+  },
+];
+
   return (
     <nav>
-      <div className="nav-logo-container">
-        <img src={logop} alt="" />
-      </div>
+      
+      
+  
+<div className="nav-logo-container brand-logo">
+  <div className="brand-name">LEARNINGWAVE</div>
+  <div className="brand-tagline">Where learning meets impact</div>
+</div>
+
+
+
       <div className="navbar-links-container">
         <a href="#Home">Home</a>
-        <a href="#about">About</a>
-        <a href="#Testimonials">Testimonials</a>
+        <a href="#About">About</a>
+        <a href="#Testimonial">Testimonials</a>
         <a href="#Contact">Contact</a>
-         {/**<a href="">
-        <BsCart2 className="navbar-cart-icon" />
-        </a>/**/}
-        <a href="https://docs.google.com/forms/d/1_e-vhBhLIERDgFU6BCgBarIncixx_irAakeqoXaW5Fs/edit" target="_blank" rel="noopener noreferrer"><button className="primary-button">Book Now</button>
-</a>
+        {/**
+        <a href="">
+          <BsCart2 className="navbar-cart-icon" />
+        </a>
+        */}
+        <a
+          href="https://docs.google.com/forms/d/1_e-vhBhLIERDgFU6BCgBarIncixx_irAakeqoXaW5Fs/edit"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="primary-button" id="Book">Book Now</button>
+        </a>
       </div>
+
       <div className="navbar-menu-container">
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
       </div>
+
       <Drawer open={openMenu} onClose={() => setOpenMenu(false)} anchor="right">
         <Box
           sx={{ width: 250 }}
@@ -68,10 +90,27 @@ const Navbar = () => {
           <List>
             {menuOptions.map((item) => (
               <ListItem key={item.text} disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>{item.icon}</ListItemIcon>
-                  <ListItemText primary={item.text} />
-                </ListItemButton>
+                
+                <Link
+  to={item.to}
+  smooth={true}
+  duration={500}
+  offset={-70} // adjusts scroll position for sticky navbar
+  onClick={() => setOpenMenu(false)} // closes the menu
+  style={{
+    textDecoration: "none",
+    color: "inherit",
+    width: "100%",
+    display: "block",
+  }}
+>
+  <ListItemButton>
+    <ListItemIcon>{item.icon}</ListItemIcon>
+    <ListItemText primary={item.text} />
+  </ListItemButton>
+</Link>
+
+
               </ListItem>
             ))}
           </List>

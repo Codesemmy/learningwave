@@ -1,11 +1,13 @@
 import React from "react";
 
 import perfect2 from "../Assets/perfect2.jpg";
+import { Link } from "react-scroll"; // make sure this is imported at the top
+
 /*import { BsFillPlayCircleFill } from "react-icons/bs";*/
 
 const About = () => {
   return (
-    <div className="about-section-container" id="about">
+    <div className="about-section-container" id="About">
       
       <div className="about-section-image-container">
         <img src={perfect2} alt="" />
@@ -23,8 +25,15 @@ const About = () => {
         Looking to transform how your team learns and performs? 
         </p>
         <div className="about-buttons-container">
-          <a href="https://docs.google.com/forms/d/1_e-vhBhLIERDgFU6BCgBarIncixx_irAakeqoXaW5Fs/edit" target="_blank" rel="noopener noreferrer"><button className="secondary-button">Contact Us</button>
-</a>
+          <Link
+  to="Get" // Match the id of the About section exactly
+  smooth={true}
+  duration={500}
+  offset={-70}
+>
+  <button className="secondary-button" id="Contactus">Contact Us</button>
+</Link>
+
           
         </div>
       </div>

@@ -24,6 +24,19 @@ body {
   background-color: #f6f6f6;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.highlighted {
+  font-size: 1.4rem;      
+  font-weight: 900;        
+  /*background-color: rgb(255, 255, 0);*/
+  padding: 2px 6px;        
+  border-radius: 4px;      
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -85,9 +98,51 @@ nav {
 }
 
 .nav-logo-container img {
-  width: 10rem;   /* Adjust to your desired size */
+  width: 12rem;   /* Adjust to your desired size */
   height: auto;   /* Maintains aspect ratio */
 }
+
+
+.brand-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Change to center if you want it centered */
+  color: rgb(139, 9, 139); 
+}
+
+.brand-name {
+  font-size: 1.7rem;
+  font-weight: bold;
+  line-height: 1.0;
+}
+
+.brand-tagline {
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.0;
+  margin-top: 1px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .brand-name {
+    font-size: 1.4rem;
+  }
+  .brand-tagline {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-name {
+    font-size: 1.2rem;
+  }
+  .brand-tagline {
+    font-size: 0.6rem;
+  }
+}
+
+
 
 .home-banner-container {
   position: relative;
@@ -116,6 +171,7 @@ nav {
   font-size: clamp(3rem, 5vw, 6rem); /* Responsive heading */
   color: black;
   margin-bottom: 1rem;
+  
 }
 
 .primary-text {
